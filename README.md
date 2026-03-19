@@ -1,14 +1,28 @@
-# astrbot-plugin-helloworld
+# astrbot-plugin-mimo-tts
 
-AstrBot 插件模板 / A template plugin for AstrBot plugin feature
+AstrBot text-to-speech plugin powered by MiMo TTS API.
 
-> [!NOTE]
-> This repo is just a template of [AstrBot](https://github.com/AstrBotDevs/AstrBot) Plugin.
-> 
-> [AstrBot](https://github.com/AstrBotDevs/AstrBot) is an agentic assistant for both personal and group conversations. It can be deployed across dozens of mainstream instant messaging platforms, including QQ, Telegram, Feishu, DingTalk, Slack, LINE, Discord, Matrix, etc. In addition, it provides a reliable and extensible conversational AI infrastructure for individuals, developers, and teams. Whether you need a personal AI companion, an intelligent customer support agent, an automation assistant, or an enterprise knowledge base, AstrBot enables you to quickly build AI applications directly within your existing messaging workflows.
+## Features
 
-# Supports
+- Convert assistant text replies into voice messages automatically.
+- Support MiMo voices such as `mimo_default`, `default_zh`, and `default_eh`.
+- Optional probability and text length filters for TTS triggering.
+- Configurable API endpoint, model, voice, format, and timeout.
 
-- [AstrBot Repo](https://github.com/AstrBotDevs/AstrBot)
-- [AstrBot Plugin Development Docs (Chinese)](https://docs.astrbot.app/dev/star/plugin-new.html)
-- [AstrBot Plugin Development Docs (English)](https://docs.astrbot.app/en/dev/star/plugin-new.html)
+## Configuration
+
+This plugin reads config from `_conf_schema.json`:
+
+- `enable_tts`: enable/disable plugin
+- `api_key`: MiMo API key (required)
+- `api_url`: API URL, default `https://api.xiaomimimo.com/v1/chat/completions`
+- `model`: default `mimo-v2-tts`
+- `voice`: default `mimo_default`
+- `audio_format`: default `wav`
+- `tts_probability`: 0-100 trigger probability
+- `min_length` / `max_length`: assistant text length range
+- `timeout`: HTTP timeout in seconds
+
+## Reference
+
+See `tts.md` for official API details and examples.

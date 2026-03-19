@@ -1,0 +1,52 @@
+{
+    "enable_tts": {
+        "type": "bool",
+        "description": "启用 MiMo TTS",
+        "default": true
+    },
+    "api_key": {
+        "type": "string",
+        "description": "MiMo API Key",
+        "default": ""
+    },
+    "api_url": {
+        "type": "string",
+        "description": "MiMo 接口地址",
+        "default": "https://api.xiaomimimo.com/v1/chat/completions"
+    },
+    "model": {
+        "type": "string",
+        "description": "模型名称",
+        "default": "mimo-v2-tts"
+    },
+    "voice": {
+        "type": "string",
+        "description": "音色",
+        "default": "mimo_default"
+    },
+    "audio_format": {
+        "type": "string",
+        "description": "音频格式",
+        "default": "wav"
+    },
+    "tts_probability": {
+        "type": "int",
+        "description": "TTS 回复概率 (0-100)",
+        "default": 100
+    },
+    "min_length": {
+        "type": "int",
+        "description": "最小文本长度",
+        "default": 1
+    },
+    "max_length": {
+        "type": "int",
+        "description": "最大文本长度",
+        "default": 120
+    },
+    "timeout": {
+        "type": "int",
+        "description": "请求超时秒数",
+        "default": 30
+    }
+}
