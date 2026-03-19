@@ -1,4 +1,4 @@
-# astrbot-plugin-mimo-tts
+# astrbot_plugin_mimo_tts
 
 AstrBot text-to-speech plugin powered by MiMo TTS API.
 
